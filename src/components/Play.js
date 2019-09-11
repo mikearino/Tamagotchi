@@ -1,13 +1,18 @@
 import React from 'react';
 import Ball from '../img/ball.jpg'
+import PropTypes from 'prop-types';
 
-function Play () {
+function Play (props) {
 
   return (
     <div>
-    <button><img src={Ball} alt="my image" /></button>
+    <button onClick={props.onPlay}><img src={Ball} alt="my image" /></button>
     </div>
   );
+}
+
+Play.propTypes = {
+  onPlay: PropTypes.func.isRequired
 }
 
 export default Play;
